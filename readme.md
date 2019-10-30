@@ -10,8 +10,8 @@ Readme.md - Last updated 2/14/2019 mtm
 
 ### Overview
 RepositoryNook is a service that exposes a RESTful API. It can run in any container, on any host-platform, that can host Linux Docker images.
-REST API, controller and code written in ASPNETCore and C#.  It targest an Atlas MongoDB database for the data store.
-We start with Azure container deployment (below).
+REST API, controller and code written in ASPNETCore and C#. This port uses GCP Firestore.
+NOTE: this is incomplete and only implements a push of the RepositoryObject (Create) to an existing collection in Firestore.
 
 It defaults to Port 8902.  
 
@@ -19,13 +19,7 @@ It is intended to be part of a set of services, brought together inside of a Mic
 
 Swagger help can be seen, after running (locally) with uri: http://localhost:8902/swagger/index.html
 
-I've deployed to Azure and AWS, and it stores repository info Mongo DB Atlas (hosted).
-
-Unlike MongoDB itself, which will create a Database and Collection if it doesn't exist, I've instituted a check for the Database/Collection which
-will throw an exception and return a 400 (Bad Request) if it doesn't exist.   We don't need typo's proliferating databases and collections out there in the wild.
-It is easy to connect with MongoDB Compass to Atlas and create the Database\Collection before the services are put to use.
-
-At present we do not support the programmatic creation of DB and collection, but that wouldn't be difficult to add.
+I've deployed to Azure and AWS, and it stores repository info into an existing Firestore collection (called "Flights")
 
 #### Azure 
 Step 1:
@@ -58,11 +52,3 @@ Your Container Registry can be cleaned out with https://github.com/mtmazurik/dev
 
 Note: Currently in testing the tag on the image in the repository is always :Latest, but in real-world, you will have
 versions, and may NOT want to use this script, lest you delete all previous image instances !
-
- 
-
-
-
-
-"# RepositoryNook" 
-"# RepositoryNookFirestore" 
