@@ -4,7 +4,7 @@
 Content is copyright 2019 (c) Cloud Computing Associates authors, released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), which gives you permission to use content for almost any purpose (but does not grant you any trademark permissions), so long as you note the license and give attribution (credit), such as follows:
 
 
-Content based on https://github.com/mtmazurik/RepositoryNook used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+Content based on https://github.com/mtmazurik/RepositoryNookFirestore used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
 Readme.md - Last updated 2/14/2019 mtm
 
